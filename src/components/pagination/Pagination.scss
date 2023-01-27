@@ -1,0 +1,47 @@
+@mixin next-arrow ($width, $color){
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='28' viewBox='0 0 20 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 2L18 13.5L2 26' stroke='%23"+$color+"' stroke-width='"+$width+"' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+@mixin previous-arrow ($width, $color){ 
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='28' viewBox='0 0 20 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18 2L2 13.5L18 26' stroke='%23"+$color+"' stroke-width='"+$width+"' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+#pagination {
+    margin: 3rem auto;
+    display: flex;
+    justify-content: center;
+    div {
+        color: rgb(0, 50, 90);
+        font: 16px/28px 'Roboto Slab', serif;
+        text-align: center;
+        width: 8rem;
+        padding: 0 2rem;
+    }
+    button {
+        width: 20px;
+        height: 28px;
+        border: none;
+        background-color: transparent;
+        background-position: center center;
+        background-repeat: no-repeat;
+        padding: 0 1rem;
+        &#next {
+            @include next-arrow (3, '00325a');
+            &:hover {
+                @include next-arrow (4, '00325a');
+            }
+            &:disabled {
+                @include next-arrow (3, '808080');
+            }
+        }
+        &#previous {
+            @include previous-arrow (3, '00325a');
+            &:hover {
+                @include previous-arrow (4, '00325a');
+            }
+            &:disabled {
+                @include previous-arrow (3, '808080');
+            }
+        }
+    }
+}

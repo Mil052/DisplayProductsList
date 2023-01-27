@@ -1,0 +1,29 @@
+.products_table {
+    border-collapse: collapse;
+    margin: 0 auto;
+    min-width: 288px;
+    width: 100%;
+    max-width: 520px;
+    font: 1.5rem/1.5rem 'Roboto Slab', serif;
+    thead {
+        border-bottom: 2px solid rgb(0, 50, 90);
+        color: rgb(0, 50, 90);
+        th {
+            font-weight: 500;
+            padding: 16px 4px;
+        }
+    }
+    tbody {
+        text-align: center;
+        font-weight: 300;
+        tr {
+            border-top: 1px solid rgb(0, 50, 90);
+            td {
+                padding: 16px 4px;
+            }
+            &:hover {
+                background-color: rgba(223, 231, 238, 0.6);
+            }
+        }
+    }
+}
