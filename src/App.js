@@ -20,7 +20,7 @@ function App() {
         <footer>
             <hr/>
             <h3>MIŁOSZ GAJDA </h3>
-            <p>Codibly Test Assignment</p>
+            <p>React Frontend Application</p>
         </footer>
     </div>
   );
